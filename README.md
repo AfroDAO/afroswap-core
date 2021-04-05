@@ -1,32 +1,32 @@
-# Afroswap V3
+# Afroswap 
 
 [![Lint](https://github.com/afroswap/afroswap-core/actions/workflows/lint.yml/badge.svg)](https://github.com/afroswap/afroswap-core/actions/workflows/lint.yml)
 [![Tests](https://github.com/afroswap/afroswap-core/actions/workflows/tests.yml/badge.svg)](https://github.com/afroswap/afroswap-core/actions/workflows/tests.yml)
 [![Fuzz Testing](https://github.com/afroswap/afroswap-core/actions/workflows/fuzz-testing.yml/badge.svg)](https://github.com/afroswap/afroswap-core/actions/workflows/fuzz-testing.yml)
 [![Mythx](https://github.com/afroswap/afroswap-core/actions/workflows/mythx.yml/badge.svg)](https://github.com/afroswap/afroswap-core/actions/workflows/mythx.yml)
-[![npm version](https://img.shields.io/npm/v/@afroswap/v3-core/latest.svg)](https://www.npmjs.com/package/@afroswap/v3-core/v/latest)
+[![npm version](https://img.shields.io/npm/v/@afroswap/-core/latest.svg)](https://www.npmjs.com/package/@afroswap/-core/v/latest)
 
-This repository contains the core smart contracts for the afroswap V3 Protocol.
+This repository contains the core smart contracts for the afroswap  Protocol.
 For higher level contracts, see the [afroswap-periphery](https://github.com/afroswap/afroswap-periphery)
 repository.
 
 ## Bug bounty
 
-This repository is subject to the afroswap V3 bug bounty program, per the terms defined [here](./bug-bounty.md).
+This repository is subject to the afroswap  bug bounty program, per the terms defined [here](./bug-bounty.md).
 
 ## Local deployment
 
 In order to deploy this code to a local testnet, you should install the npm package
-`@afroswap/v3-core`
+`@afroswap/-core`
 and import the factory bytecode located at
-`@afroswap/v3-core/artifacts/contracts/afroswapV3Factory.sol/afroswapV3Factory.json`.
+`@afroswap/-core/artifacts/contracts/afroswapFactory.sol/afroswapFactory.json`.
 For example:
 
 ```typescript
 import {
   abi as FACTORY_ABI,
   bytecode as FACTORY_BYTECODE,
-} from '@afroswap/v3-core/artifacts/contracts/afroswapV3Factory.sol/afroswapV3Factory.json'
+} from '@afroswap/-core/artifacts/contracts/afroswapFactory.sol/afroswapFactory.json'
 
 // deploy the bytecode
 ```
@@ -37,14 +37,14 @@ your local deployment.
 
 ## Using solidity interfaces
 
-The afroswap v3 interfaces are available for import into solidity smart contracts
-via the npm artifact `@afroswap/v3-core`, e.g.:
+The afroswap  interfaces are available for import into solidity smart contracts
+via the npm artifact `@afroswap/-core`, e.g.:
 
 ```solidity
-import '@afroswap/v3-core/contracts/interfaces/IafroswapV3Pool.sol';
+import '@afroswap/-core/contracts/interfaces/IafroswapPool.sol';
 
 contract MyContract {
-  IafroswapV3Pool pool;
+  IafroswapPool pool;
 
   function doSomethingWithPool() {
     // pool.swap(...);
@@ -55,7 +55,7 @@ contract MyContract {
 
 ## Licensing
 
-The primary license for afroswap V3 Core is the Business Source License 1.1 (`BUSL-1.1`), see [`LICENSE`](./LICENSE).
+The primary license for afroswap  Core is the Business Source License 1.1 (`BUSL-1.1`), see [`LICENSE`](./LICENSE).
 
 ### Exceptions
 
